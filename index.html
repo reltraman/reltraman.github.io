@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RELTRAMAN Business Advisory FZE | Business & Management Consultancy UAE</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y54L70B50X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Y54L70B50X');
+  </script>
+<meta name="description" content="RELTRAMAN Business Advisory FZE — Professional business consultancy and management advisory services for entrepreneurs and SMEs in the UAE.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --navy: #1B2A4A;
+    --dark: #0A0A0A;
+    --dark-2: #111111;
+    --dark-3: #1A1A1A;
+    --white: #F5F2EC;
+    --white-dim: rgba(245,242,236,0.6);
+    --white-faint: rgba(245,242,236,0.06);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Barlow',sans-serif; background:var(--dark); color:var(--white); overflow-x:hidden; cursor:none; }
+
+  /* CURSOR */
+  .cursor { width:8px; height:8px; background:var(--gold); border-radius:50%; position:fixed; pointer-events:none; z-index:9999; transition:transform 0.1s; }
+  .cursor-ring { width:32px; height:32px; border:1px solid rgba(145,118,52,0.4); border-radius:50%; position:fixed; pointer-events:none; z-index:9998; transition:all 0.3s; }
+
+  /* NAV */
+  nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:24px 60px; display:flex; justify-content:space-between; align-items:center; background:linear-gradient(to bottom,rgba(10,10,10,0.95),transparent); backdrop-filter:blur(4px); }
+  .logo { font-family:'Cormorant Garamond',serif; font-size:28px; font-weight:600; letter-spacing:5px; }
+  .logo .rel { color:var(--white); }
+  .logo .tra { color:var(--gold); }
+  .logo .man { color:var(--white); }
+  .nav-links { display:flex; gap:36px; list-style:none; }
+  .nav-links a { font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--white-dim); text-decoration:none; transition:color 0.3s; }
+  .nav-links a:hover { color:var(--gold); }
+  .nav-cta { font-size:10px; letter-spacing:3px; text-transform:uppercase; padding:11px 26px; border:1px solid var(--gold); color:var(--gold); text-decoration:none; transition:all 0.3s; }
+  .nav-cta:hover { background:var(--gold); color:var(--dark); }
+
+  /* HERO */
+  .hero { min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding:120px 60px 80px; position:relative; overflow:hidden; }
+  .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 60% at 80% 50%,rgba(145,118,52,0.06) 0%,transparent 70%),radial-gradient(ellipse 40% 40% at 20% 80%,rgba(145,118,52,0.04) 0%,transparent 70%); }
+  .hero-tag { font-size:10px; letter-spacing:5px; text-transform:uppercase; color:var(--gold); margin-bottom:36px; display:flex; align-items:center; gap:16px; opacity:0; animation:fadeUp 0.8s ease 0.2s forwards; }
+  .hero-tag::before { content:''; width:40px; height:1px; background:var(--gold); }
+  .hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(48px,8vw,108px); font-weight:300; line-height:1; letter-spacing:-1px; margin-bottom:36px; opacity:0; animation:fadeUp 0.8s ease 0.4s forwards; }
+  .hero h1 em { font-style:italic; color:var(--gold); }
+  .hero-sub { font-size:13px; letter-spacing:1.5px; color:var(--white-dim); max-width:480px; line-height:1.9; margin-bottom:52px; opacity:0; animation:fadeUp 0.8s ease 0.6s forwards; font-weight:300; }
+  .hero-pillars { display:flex; gap:44px; opacity:0; animation:fadeUp 0.8s ease 0.8s forwards; }
+  .hero-pillar { display:flex; align-items:center; gap:10px; }
+  .pillar-code { font-size:10px; letter-spacing:4px; color:var(--gold); text-transform:uppercase; }
+  .pillar-name { font-size:11px; letter-spacing:2px; color:var(--white-dim); text-transform:uppercase; font-weight:300; }
+  .pillar-dot { color:var(--gold); margin:0 6px; font-size:14px; }
+  .pillar-gap { color:rgba(145,118,52,0.2); font-size:18px; font-weight:100; padding:0 8px; }
+  .scroll-indicator { position:absolute; bottom:52px; right:60px; left:auto; opacity:0; animation:fadeUp 0.8s ease 1.2s forwards; display:flex; flex-direction:column; align-items:center; gap:12px; }
+  .scroll-indicator span { font-size:9px; letter-spacing:4px; text-transform:uppercase; color:var(--white-dim); writing-mode:vertical-rl; }
+  .scroll-indicator::after { content:''; width:1px; height:48px; background:linear-gradient(to bottom,var(--gold),transparent); animation:scrollLine 2s ease-in-out infinite; }
+  @keyframes scrollLine { 0%,100%{opacity:1;transform:scaleY(1);transform-origin:top;} 50%{opacity:0.3;transform:scaleY(0.5);transform-origin:top;} }
+
+  /* MARQUEE */
+  .marquee-wrap { padding:20px 0; background:rgba(145,118,52,0.08); border-top:1px solid rgba(145,118,52,0.12); border-bottom:1px solid rgba(145,118,52,0.12); overflow:hidden; white-space:nowrap; }
+  .marquee-inner { display:inline-block; animation:marquee 25s linear infinite; }
+  .marquee-inner span { font-size:10px; letter-spacing:5px; text-transform:uppercase; color:var(--gold); font-weight:400; margin:0 48px; }
+  .marquee-inner span.sep { color:rgba(145,118,52,0.3); margin:0 20px; }
+
+  /* SECTIONS */
+  .section-tag { font-size:9px; letter-spacing:5px; text-transform:uppercase; color:var(--gold); margin-bottom:20px; display:flex; align-items:center; gap:12px; }
+  .section-tag::before { content:''; width:28px; height:1px; background:var(--gold); }
+
+  /* ABOUT */
+  .about { padding:140px 60px; display:grid; grid-template-columns:1fr 1fr; gap:90px; align-items:center; }
+  .about-left h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(34px,4vw,54px); font-weight:300; line-height:1.15; margin-bottom:28px; }
+  .about-left h2 em { font-style:italic; color:var(--gold); }
+  .about-left p { font-size:13px; line-height:1.95; color:var(--white-dim); margin-bottom:18px; font-weight:300; }
+  .about-right { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:rgba(145,118,52,0.1); }
+  .stat-box { background:var(--dark-2); padding:36px 28px; position:relative; overflow:hidden; transition:background 0.3s; }
+  .stat-box:hover { background:var(--dark-3); }
+  .stat-box::after { content:''; position:absolute; bottom:0; left:0; right:0; height:2px; background:var(--gold); transform:scaleX(0); transition:transform 0.3s; transform-origin:left; }
+  .stat-box:hover::after { transform:scaleX(1); }
+  .stat-num { font-family:'Cormorant Garamond',serif; font-size:46px; font-weight:300; color:var(--gold); line-height:1; margin-bottom:8px; font-variant-numeric:lining-nums; font-feature-settings:"lnum" 1; }
+  .stat-label { font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--white-dim); font-weight:300; }
+
+  /* SERVICES */
+  .services { padding:140px 60px; background:var(--dark-2); }
+  .services-header { margin-bottom:70px; }
+  .services-header h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(38px,5vw,62px); font-weight:300; }
+  .services-header h2 em { font-style:italic; color:var(--gold); }
+  .services-header p { font-size:12px; color:var(--white-dim); max-width:480px; line-height:1.9; margin-top:16px; font-weight:300; letter-spacing:0.3px; }
+
+  /* TWO BIG SERVICE CARDS */
+  .services-main { display:grid; grid-template-columns:1fr 1fr; gap:2px; background:rgba(145,118,52,0.08); margin-bottom:2px; }
+  .service-card { background:var(--dark); padding:60px 52px; position:relative; overflow:hidden; transition:background 0.4s; }
+  .service-card:hover { background:var(--dark-3); }
+  .service-card::before { content:''; position:absolute; top:0; left:0; width:3px; height:0; background:var(--gold); transition:height 0.4s; }
+  .service-card:hover::before { height:100%; }
+  .service-num { font-family:'Cormorant Garamond',serif; font-size:72px; font-weight:300; color:rgba(145,118,52,0.1); position:absolute; top:20px; right:28px; line-height:1; transition:color 0.4s; font-variant-numeric:lining-nums; font-feature-settings:"lnum" 1; }
+  .service-card:hover .service-num { color:rgba(145,118,52,0.2); }
+  .service-icon { width:44px; height:44px; border:1px solid rgba(145,118,52,0.25); display:flex; align-items:center; justify-content:center; margin-bottom:28px; color:var(--gold); font-size:18px; transition:all 0.4s; }
+  .service-card:hover .service-icon { border-color:var(--gold); background:rgba(145,118,52,0.06); }
+  .service-name { font-family:'Cormorant Garamond',serif; font-size:30px; font-weight:400; margin-bottom:16px; color:var(--white); }
+  .service-desc { font-size:12px; line-height:1.9; color:var(--white-dim); font-weight:300; margin-bottom:24px; }
+  .service-items { display:flex; flex-direction:column; gap:8px; }
+  .service-item { display:flex; align-items:flex-start; gap:10px; font-size:11px; color:var(--white-dim); font-weight:300; letter-spacing:0.5px; }
+  .service-item::before { content:'—'; color:var(--gold); flex-shrink:0; margin-top:1px; }
+
+  /* APPROACH */
+  .approach { padding:120px 60px; }
+  .approach-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:rgba(145,118,52,0.08); margin-top:60px; }
+  .approach-card { background:var(--dark); padding:52px 40px; transition:background 0.3s; }
+  .approach-card:hover { background:var(--dark-3); }
+  .approach-num { font-size:10px; letter-spacing:4px; color:var(--gold); margin-bottom:24px; font-weight:400; }
+  .approach-title { font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:400; margin-bottom:16px; }
+  .approach-desc { font-size:12px; line-height:1.9; color:var(--white-dim); font-weight:300; }
+
+  /* WHO WE SERVE */
+  .serve { padding:120px 60px; background:var(--dark-2); }
+  .serve-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:2px; background:rgba(145,118,52,0.08); margin-top:60px; }
+  .serve-card { background:var(--dark); padding:36px 28px; text-align:center; transition:background 0.3s; }
+  .serve-card:hover { background:var(--dark-3); }
+  .serve-icon { font-size:28px; margin-bottom:14px; }
+  .serve-title { font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:400; margin-bottom:8px; }
+  .serve-desc { font-size:11px; color:var(--white-dim); letter-spacing:1px; text-transform:uppercase; font-weight:300; }
+
+  /* PHILOSOPHY */
+  .philosophy { padding:120px 60px; }
+  .philosophy-inner { display:grid; grid-template-columns:1fr 2fr; gap:80px; align-items:center; }
+  .philosophy-left h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(36px,4vw,56px); font-weight:300; line-height:1.1; }
+  .philosophy-left h2 em { font-style:italic; color:var(--gold); }
+  .philosophy-right { display:flex; flex-direction:column; gap:32px; }
+  .philosophy-item { padding-bottom:28px; border-bottom:1px solid rgba(145,118,52,0.1); }
+  .philosophy-item:last-child { border-bottom:none; }
+  .philosophy-label { font-size:9px; letter-spacing:4px; text-transform:uppercase; color:var(--gold); margin-bottom:10px; }
+  .philosophy-text { font-size:13px; line-height:1.9; color:var(--white-dim); font-weight:300; }
+
+  /* CTA */
+  .cta { padding:100px 60px; background:var(--dark-2); border-top:1px solid rgba(145,118,52,0.1); border-bottom:1px solid rgba(145,118,52,0.1); display:grid; grid-template-columns:1fr auto; gap:60px; align-items:center; }
+  .cta h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(34px,4vw,54px); font-weight:300; }
+  .cta h2 em { font-style:italic; color:var(--gold); }
+  .cta-actions { display:flex; flex-direction:column; gap:14px; }
+  .btn-primary { padding:15px 36px; background:var(--gold); color:var(--dark); text-decoration:none; font-size:10px; letter-spacing:3px; text-transform:uppercase; font-weight:600; transition:background 0.3s; display:inline-block; text-align:center; white-space:nowrap; }
+  .btn-primary:hover { background:var(--gold-light); }
+  .btn-secondary { padding:15px 36px; border:1px solid rgba(145,118,52,0.35); color:var(--gold); text-decoration:none; font-size:10px; letter-spacing:3px; text-transform:uppercase; transition:all 0.3s; display:inline-block; text-align:center; white-space:nowrap; }
+  .btn-secondary:hover { border-color:var(--gold); background:rgba(145,118,52,0.05); }
+
+  /* CONTACT */
+  .contact { padding:140px 60px; }
+  .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; margin-top:60px; }
+  .contact-info { display:flex; flex-direction:column; gap:28px; }
+  .contact-item { padding-bottom:24px; border-bottom:1px solid rgba(145,118,52,0.1); }
+  .contact-label { font-size:9px; letter-spacing:4px; text-transform:uppercase; color:var(--gold); margin-bottom:6px; }
+  .contact-value { font-family:'Cormorant Garamond',serif; font-size:18px; color:var(--white); font-variant-numeric:lining-nums; font-feature-settings:"lnum" 1; }
+  .contact-form { display:flex; flex-direction:column; gap:16px; }
+  .form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .form-field { display:flex; flex-direction:column; gap:6px; }
+  .form-field label { font-size:9px; letter-spacing:3px; text-transform:uppercase; color:var(--white-dim); font-weight:300; }
+  .form-field input,.form-field textarea,.form-field select { background:var(--dark-3); border:1px solid rgba(145,118,52,0.15); padding:12px 16px; color:var(--white); font-family:'Barlow',sans-serif; font-size:12px; outline:none; transition:border-color 0.3s; resize:none; appearance:none; }
+  .form-field input:focus,.form-field textarea:focus,.form-field select:focus { border-color:var(--gold); }
+  .form-field select option { background:var(--dark-3); }
+  .form-submit { padding:14px 36px; background:var(--gold); color:var(--dark); border:none; font-family:'Barlow',sans-serif; font-size:10px; letter-spacing:3px; text-transform:uppercase; font-weight:600; cursor:pointer; transition:background 0.3s; align-self:flex-start; }
+  .form-submit:hover { background:var(--gold-light); }
+
+  /* DISCLAIMER */
+  .disclaimer { padding:40px 60px; background:var(--dark-2); border-top:1px solid rgba(145,118,52,0.08); }
+  .disclaimer-inner { display:flex; align-items:flex-start; gap:20px; }
+  .disclaimer-icon { color:var(--gold); font-size:14px; flex-shrink:0; margin-top:2px; }
+  .disclaimer-text { font-size:10px; line-height:1.8; color:rgba(245,242,236,0.3); font-weight:300; letter-spacing:0.5px; }
+  .disclaimer-text strong { color:rgba(245,242,236,0.5); }
+
+  /* FOOTER */
+  footer { padding:52px 60px; background:var(--dark-2); border-top:1px solid rgba(145,118,52,0.1); display:grid; grid-template-columns:1fr 1fr 1fr; gap:48px; align-items:center; }
+  .footer-logo { font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:600; letter-spacing:5px; }
+  .footer-logo .tra { color:var(--gold); }
+  .footer-sub { font-size:9px; letter-spacing:3px; color:var(--white-dim); margin-top:6px; text-transform:uppercase; font-weight:300; }
+  .footer-center { text-align:center; font-size:10px; letter-spacing:1.5px; color:var(--white-dim); font-weight:300; line-height:1.8; }
+  .footer-right { text-align:right; display:flex; flex-direction:column; gap:4px; }
+  .footer-right a { font-size:10px; color:var(--gold); text-decoration:none; letter-spacing:1px; }
+  .footer-right span { font-size:9px; color:rgba(245,242,236,0.3); letter-spacing:1px; }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+  @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+  .fade-up { opacity:0; transform:translateY(28px); transition:opacity 0.7s ease,transform 0.7s ease; }
+  .fade-up.visible { opacity:1; transform:translateY(0); }
+
+  /* RESPONSIVE */
+  @media(max-width:768px){
+    nav{padding:18px 24px;}
+    .nav-links{display:none;}
+    .hero,.about,.services,.approach,.serve,.philosophy,.cta,.contact,.disclaimer,footer{padding-left:24px;padding-right:24px;}
+    .hero h1{font-size:48px;}
+    .hero-pillars{flex-direction:column;gap:16px;}
+    .scroll-indicator{display:none;}
+    .hero-pillars .pillar-sep{display:none;}
+    .about,.contact-grid{grid-template-columns:1fr;gap:48px;}
+    .services-main,.approach-grid{grid-template-columns:1fr;}
+    .serve-grid{grid-template-columns:repeat(2,1fr);}
+    .cta{grid-template-columns:1fr;}
+    .philosophy-inner{grid-template-columns:1fr;}
+    footer{grid-template-columns:1fr;text-align:center;}
+    .footer-right{text-align:center;}
+    .form-row{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="logo"><span class="rel">REL</span><span class="tra">TRA</span><span class="man">MAN</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#approach">Approach</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Enquire</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-tag">Business &amp; Management Consultancy · UAE</div>
+  <h1>Advisory Built on <em>Clarity.</em></h1>
+  <p class="hero-sub">RELTRAMAN Business Advisory FZE provides independent business consultancy and management advisory services to entrepreneurs, SMEs, and organisations seeking practical, structured guidance.</p>
+  <div class="hero-pillars">
+    <div class="hero-pillar">
+      <span class="pillar-code">Business</span>
+      <span class="pillar-dot">·</span>
+      <span class="pillar-name">Consultancy</span>
+    </div>
+    <span class="pillar-gap">|</span>
+    <div class="hero-pillar">
+      <span class="pillar-code">Management</span>
+      <span class="pillar-dot">·</span>
+      <span class="pillar-name">Advisory</span>
+    </div>
+    <span class="pillar-gap">|</span>
+    <div class="hero-pillar">
+      <span class="pillar-code">UAE</span>
+      <span class="pillar-dot">·</span>
+      <span class="pillar-name">Registered</span>
+    </div>
+  </div>
+  <div class="scroll-indicator"><span>Scroll</span></div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-inner">
+    <span>Strategic Advisory</span><span class="sep">·</span>
+    <span>Business Consultancy</span><span class="sep">·</span>
+    <span>Management Advisory</span><span class="sep">·</span>
+    <span>Operational Advisory</span><span class="sep">·</span>
+    <span>Strategic Planning</span><span class="sep">·</span>
+    <span>Process Improvement</span><span class="sep">·</span>
+    <span>Strategic Advisory</span><span class="sep">·</span>
+    <span>Business Consultancy</span><span class="sep">·</span>
+    <span>Management Advisory</span><span class="sep">·</span>
+    <span>Operational Advisory</span><span class="sep">·</span>
+    <span>Strategic Planning</span><span class="sep">·</span>
+    <span>Process Improvement</span><span class="sep">·</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-left fade-up">
+    <div class="section-tag">Who We Are</div>
+    <h2>Your Independent <em>Advisory</em> Partner</h2>
+    <p>RELTRAMAN Business Advisory FZE is a professional business consultancy and management advisory firm registered in the United Arab Emirates. We provide structured, independent advisory services to help businesses improve performance, clarify strategy, and achieve their goals.</p>
+    <p>Our work is advisory in nature — practical, clear, and focused on delivering real value to UAE businesses and entrepreneurs.</p>
+    <p style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-top:12px;">UAE Licensed · Advisory Services · Independent</p>
+  </div>
+  <div class="about-right fade-up">
+    <div class="stat-box"><div class="stat-num">UAE</div><div class="stat-label">Licensed &amp; Registered</div></div>
+    <div class="stat-box"><div class="stat-num">100%</div><div class="stat-label">Independent Advisory</div></div>
+    <div class="stat-box"><div class="stat-num">CARE</div><div class="stat-label">Client Commitment</div></div>
+    <div class="stat-box"><div class="stat-num">SME</div><div class="stat-label">Advisory Focus</div></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-header fade-up">
+    <div class="section-tag">Our Services</div>
+    <h2>Two Core <em>Advisory</em> Disciplines</h2>
+    <p>Our consultancy services are structured around two primary disciplines, delivered through independent advice, analysis, and practical recommendations.</p>
+  </div>
+
+  <div class="services-main">
+
+    <!-- Service 1 -->
+    <div class="service-card fade-up">
+      <div class="service-num">01</div>
+      <div class="service-icon">◇</div>
+      <div class="service-name">Business Consultancy</div>
+      <p class="service-desc">Broad, practical advisory support to help businesses improve performance, evaluate structure, and navigate decisions with greater clarity and confidence.</p>
+      <div class="service-items">
+        <div class="service-item">Business planning and structure advisory</div>
+        <div class="service-item">Business model evaluation and improvement</div>
+        <div class="service-item">Business growth and development advisory</div>
+        <div class="service-item">Operational planning advisory</div>
+        <div class="service-item">Strategic decision-making assistance</div>
+        <div class="service-item">Business performance assessment</div>
+      </div>
+    </div>
+
+    <!-- Service 2 -->
+    <div class="service-card fade-up">
+      <div class="service-num">02</div>
+      <div class="service-icon">⬡</div>
+      <div class="service-name">Management Consultancy</div>
+      <p class="service-desc">Operational and strategic advisory focused on improving internal management systems, organisational effectiveness, and business processes.</p>
+      <div class="service-items">
+        <div class="service-item">Organisational structure advisory</div>
+        <div class="service-item">Process improvement recommendations</div>
+        <div class="service-item">Internal workflow optimisation</div>
+        <div class="service-item">Management systems evaluation</div>
+        <div class="service-item">Strategic planning advisory</div>
+        <div class="service-item">Business process improvement guidance</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Advisory Note -->
+  <div style="background:var(--dark-3);padding:32px 52px;border-left:3px solid rgba(145,118,52,0.3);margin-top:2px;">
+    <p style="font-size:11px;color:var(--white-dim);line-height:1.8;font-weight:300;letter-spacing:0.5px;">
+      <span style="color:var(--gold);letter-spacing:3px;text-transform:uppercase;font-size:9px;">Important · </span>
+      All services provided by RELTRAMAN Business Advisory FZE are advisory and consultancy in nature. We do not provide legal representation, licensed financial services, regulated tax agent services, or government processing services. Our role is to advise, guide, and support — not to act on behalf of clients before regulatory authorities.
+    </p>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="approach" id="approach">
+  <div class="fade-up">
+    <div class="section-tag">Our Approach</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4vw,56px);font-weight:300;">Simple. <em>Transparent.</em> Effective.</h2>
+  </div>
+  <div class="approach-grid">
+    <div class="approach-card fade-up">
+      <div class="approach-num">01 — Understand</div>
+      <div class="approach-title">Listen &amp; Assess</div>
+      <p class="approach-desc">We begin by understanding your business, goals, and challenges in detail before offering any recommendations. No generic advice — only context-specific guidance.</p>
+    </div>
+    <div class="approach-card fade-up">
+      <div class="approach-num">02 — Advise</div>
+      <div class="approach-title">Analyse &amp; Recommend</div>
+      <p class="approach-desc">We evaluate your situation objectively and provide clear, structured recommendations with honest assessments of options, risks, and opportunities.</p>
+    </div>
+    <div class="approach-card fade-up">
+      <div class="approach-num">03 — Support</div>
+      <div class="approach-title">Guide &amp; Follow Through</div>
+      <p class="approach-desc">We remain available throughout the advisory engagement to answer questions, review progress, and refine recommendations based on evolving business needs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section class="serve">
+  <div class="fade-up">
+    <div class="section-tag">Who We Serve</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4vw,56px);font-weight:300;">Built for <em>Entrepreneurs</em></h2>
+  </div>
+  <div class="serve-grid">
+    <div class="serve-card fade-up">
+      <div class="serve-icon">🚀</div>
+      <div class="serve-title">Entrepreneurs</div>
+      <div class="serve-desc">Ideation · Strategy · Planning</div>
+    </div>
+    <div class="serve-card fade-up">
+      <div class="serve-icon">🏢</div>
+      <div class="serve-title">SMEs</div>
+      <div class="serve-desc">Growing · Improving · Optimising</div>
+    </div>
+    <div class="serve-card fade-up">
+      <div class="serve-icon">📋</div>
+      <div class="serve-title">New Businesses</div>
+      <div class="serve-desc">Planning · Launch · Growth</div>
+    </div>
+    <div class="serve-card fade-up">
+      <div class="serve-icon">💼</div>
+      <div class="serve-title">Remote Businesses</div>
+      <div class="serve-desc">Digital · Remote-first · Scalable</div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="philosophy">
+  <div class="philosophy-inner">
+    <div class="fade-up">
+      <div class="section-tag">Our Foundation</div>
+      <h2>Three Words.<br><em>One Standard.</em></h2>
+    </div>
+    <div class="philosophy-right fade-up">
+      <div class="philosophy-item">
+        <div class="philosophy-label">REL — Reliable</div>
+        <p class="philosophy-text">We deliver on our commitments with consistency, professionalism, and reliability. Our clients trust us because we have never given them a reason not to. Reliability is not a policy at RELTRAMAN — it is our identity.</p>
+      </div>
+      <div class="philosophy-item">
+        <div class="philosophy-label">TRA — Transparent</div>
+        <p class="philosophy-text">We believe in complete openness with our clients. Clear communication, honest advice, and full visibility into every process. Transparency is the foundation of every long-term relationship we build.</p>
+      </div>
+      <div class="philosophy-item">
+        <div class="philosophy-label">MAN — Management</div>
+        <p class="philosophy-text">Professional expertise and structured management thinking working for you. We deliver practical, actionable guidance focused on real outcomes — not theory.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta fade-up">
+  <h2>Ready to Work with a <em>Trusted</em> Advisory Partner?</h2>
+  <div class="cta-actions">
+    <a href="#contact" class="btn-primary">Start a Conversation</a>
+    <a href="mailto:info@reltraman.com" class="btn-secondary">info@reltraman.com</a>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="fade-up">
+    <div class="section-tag">Get In Touch</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(38px,4vw,60px);font-weight:300;">Let's Start a <em>Conversation</em></h2>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info fade-up">
+      <div class="contact-item">
+        <div class="contact-label">WhatsApp · Phone</div>
+        <div class="contact-value">+971 50 405 1626</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">General Enquiries</div>
+        <div class="contact-value">info@reltraman.com</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Website</div>
+        <div class="contact-value">www.reltraman.com</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Location</div>
+        <div class="contact-value">United Arab Emirates</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Response</div>
+        <div class="contact-value">Professional Response Commitment</div>
+      </div>
+    </div>
+    <form class="contact-form fade-up" onsubmit="return false;">
+      <div class="form-row">
+        <div class="form-field"><label>First Name</label><input type="text" placeholder="Your first name"></div>
+        <div class="form-field"><label>Last Name</label><input type="text" placeholder="Your last name"></div>
+      </div>
+      <div class="form-field"><label>Email Address</label><input type="email" placeholder="your@email.com"></div>
+      <div class="form-field">
+        <label>Advisory Area</label>
+        <select>
+          <option value="" disabled selected>Select advisory type</option>
+          <option>Business Consultancy</option>
+          <option>Management Consultancy</option>
+          <option>Business Planning Advisory</option>
+          <option>Operational Advisory</option>
+          <option>Strategic Planning</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-field"><label>Your Message</label><textarea rows="4" placeholder="Tell us about your requirements..."></textarea></div>
+      <button type="submit" class="form-submit">Send Enquiry →</button>
+    </form>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<div class="disclaimer">
+  <div class="disclaimer-inner">
+    <div class="disclaimer-icon">⚠</div>
+    <p class="disclaimer-text">
+      <strong>Important Notice:</strong> RELTRAMAN Business Advisory FZE is an independent business consultancy firm licensed in the United Arab Emirates. All services provided are advisory and consultancy in nature only. We are not affiliated with any government authority, free zone administration, or licensing institution. We do not provide legal representation, licensed financial advice, regulated tax agent services, or government processing services on behalf of clients. Any reference to UAE free zones or business jurisdictions is for advisory context only and does not imply official partnership, agency, or regulatory authorization with any such entity.
+    </p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo"><span class="rel">REL</span><span class="tra">TRA</span><span class="man">MAN</span></div>
+    <div class="footer-sub">BUSINESS ADVISORY FZE · UAE</div>
+  </div>
+  <div class="footer-center">
+    © 2026 RELTRAMAN BUSINESS ADVISORY FZE<br>
+    Ajman Free Zone · UAE<br>
+    <span style="color:rgba(245,242,236,0.2);font-size:9px;letter-spacing:1px;">Independent Business &amp; Management Consultancy</span><br>
+    <span style="color:rgba(245,242,236,0.15);font-size:9px;letter-spacing:1px;">Serving UAE entrepreneurs, startups and small businesses</span><br>
+    <span style="font-size:9px;color:rgba(245,242,236,0.2);letter-spacing:1px;">
+      <a href="#" style="color:rgba(245,242,236,0.3);text-decoration:none;">Privacy Policy</a>
+      &nbsp;·&nbsp;
+      <a href="#" style="color:rgba(245,242,236,0.3);text-decoration:none;">Terms of Use</a>
+    </span>
+  </div>
+  <div class="footer-right">
+    <a href="mailto:info@reltraman.com">info@reltraman.com</a>
+    <span>www.reltraman.com</span>
+    <span style="font-size:9px;color:rgba(245,242,236,0.2);">UAE Licensed · Independent Advisory</span>
+  </div>
+</footer>
+
+<!-- WhatsApp Float Button -->
+<style>
+  .wa-float{position:fixed;bottom:32px;right:32px;left:auto;z-index:999;display:flex;align-items:center;flex-direction:row-reverse;gap:12px;text-decoration:none;opacity:0;animation:fadeUp 1s ease 1.5s forwards;}
+  .wa-btn{width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.35);transition:transform 0.3s,box-shadow 0.3s;flex-shrink:0;}
+  .wa-btn:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,0.55);}
+  .wa-btn svg{width:28px;height:28px;fill:white;}
+  .wa-label{background:rgba(10,10,10,0.88);border:1px solid rgba(37,211,102,0.25);padding:8px 16px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#25D366;font-family:'Barlow',sans-serif;white-space:nowrap;opacity:0;transform:translateX(8px);transition:all 0.3s;pointer-events:none;}
+  .wa-float:hover .wa-label{opacity:1;transform:translateX(0);}
+  @media(max-width:768px){.wa-label{display:none;}.wa-float{bottom:24px;right:24px;}}
+</style>
+<a class="wa-float" href="https://wa.me/971504051626?text=Hello%20RELTRAMAN%2C%20I%20would%20like%20to%20enquire%20about%20your%20advisory%20services." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <div class="wa-btn">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </div>
+  <div class="wa-label">WhatsApp Us</div>
+</a>
+
+<script>
+  // Cursor
+  const cursor=document.getElementById('cursor');
+  const ring=document.getElementById('cursorRing');
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.transform=`translate(${mx-4}px,${my-4}px)`;});
+  function animateRing(){rx+=(mx-rx-16)*0.12;ry+=(my-ry-16)*0.12;ring.style.transform=`translate(${rx}px,${ry}px)`;requestAnimationFrame(animateRing);}
+  animateRing();
+  document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>{ring.style.borderColor='rgba(145,118,52,0.8)';});el.addEventListener('mouseleave',()=>{ring.style.borderColor='rgba(145,118,52,0.4)';});});
+
+  // Scroll animation
+  const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}});},{threshold:0.08});
+  document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+
+  // Smooth nav
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'});});});
+</script>
+</body>
+</html>
